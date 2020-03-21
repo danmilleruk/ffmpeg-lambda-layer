@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: ffmpeg-lambda-layer
+
+Resources:
+    ResourceLayer:
+        Type: AWS::Serverless::LayerVersion
+        Properties:
+            LayerName: ffmpeg-lambda-layer
+            Description: Layer containing compiled c7n binaries
+            ContentUri: build/layer
+            CompatibleRuntimes:
+              - ruby2.5
+              - python3.7
+            LicenseInfo: 'MIT'
+            RetentionPolicy: Retain
+
+Outputs:
+  Layer:
+    Description: 
+    Value: !Ref ResourceLayer
+    Export:
+      Name: ffmpeg-lambda-layer
