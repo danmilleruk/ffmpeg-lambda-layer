@@ -12,7 +12,7 @@ jobs:
     - run: make
     - uses: r0zar/sam-deploy-action@v1.0
       env:
-        TEMPLATE: 'template.yaml'
+        TEMPLATE: 'template.yml'
         AWS_STACK_NAME: 'ffmpeg-lambda-layer'
         AWS_REGION: 'eu-west-1'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
