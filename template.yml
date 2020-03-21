@@ -17,7 +17,7 @@ Resources:
 
 Outputs:
   Layer:
-    Description: 
+    Description: FFMPEG layer
     Value: !Ref ResourceLayer
     Export:
       Name: ffmpeg-lambda-layer
